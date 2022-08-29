@@ -40,7 +40,6 @@ Follow up: Could you find an algorithm that runs in O(m + n) time?
 
 */
 
-
 class Solution {
 public:
     string minWindow(string s, string t) {
@@ -48,21 +47,18 @@ public:
         string ans;
         if(m>n || m==0) return ans;
         int l=0,r=0;
-        vector<int>arr(126,0),trr(126,0);
+        vector<int>trr(126,0),arr(126,0);
+        map<char ,int>mp;
         for(char i:t) trr[i]++;
+        int cnt=0;
+        for(int i=0;i<126;i++) if(trr[i]) cnt++;
         while(r<n){
             arr[s[r]]++;
-            bool x=1;
-            for(int i=0;i<126;i++){
-                if(arr[i]<trr[i]){
-                    x=0;
-                    break;
-                }
-            }
-            while(x and r<n and l<=r){
+            if(arr[s[r]]==trr[s[r]]) cnt--;
+            while(cnt==0 and r<n and l<=r){
                 if(ans.size()==0 || ans.size()>r-l+1) ans=s.substr(l,r-l+1);
                 arr[s[l]]--;
-                if(arr[s[l]]<trr[s[l]]) x=0;
+                if(trr[s[l]]!=0 and arr[s[l]]<trr[s[l]]) cnt++;
                 l++;
             }
             r++;
@@ -70,3 +66,34 @@ public:
         return ans;
     }
 };
+
+
+// class Solution {
+// public:
+//     string minWindow(string s, string t) {
+//         int n=s.size(),m=t.size();
+//         string ans;
+//         if(m>n || m==0) return ans;
+//         int l=0,r=0;
+//         vector<int>arr(126,0),trr(126,0);
+//         for(char i:t) trr[i]++;
+//         while(r<n){
+//             arr[s[r]]++;
+//             bool x=1;
+//             for(int i=0;i<126;i++){
+//                 if(arr[i]<trr[i]){
+//                     x=0;
+//                     break;
+//                 }
+//             }
+//             while(x and r<n and l<=r){
+//                 if(ans.size()==0 || ans.size()>r-l+1) ans=s.substr(l,r-l+1);
+//                 arr[s[l]]--;
+//                 if(arr[s[l]]<trr[s[l]]) x=0;
+//                 l++;
+//             }
+//             r++;
+//         }
+//         return ans;
+//     }
+// };
