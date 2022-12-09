@@ -2,7 +2,7 @@
 
 class Solution {
 public:
-    int maxVowels(string s, int k) {
+    int maxVowels(string s, int k){
         int n=s.size();
         int cnt=0;
         for(int i=0;i<k;i++){
