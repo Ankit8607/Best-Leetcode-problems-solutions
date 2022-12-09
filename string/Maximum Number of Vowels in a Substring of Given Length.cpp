@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/maximum-number-of-vowels-in-a-substring-of-given-length/description/
 
-class Solution {
+class Solution{
 public:
     int maxVowels(string s, int k) {
         int n=s.size();
