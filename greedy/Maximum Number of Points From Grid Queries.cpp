@@ -6,7 +6,7 @@ public:
     int vis[1010][1010];
     set<pair<int,pair<int,int>>>st;
     void rec(vector<vector<int>>& grid,int q) {
-        while(!st.empty() and (*st.begin()).first<q){
+        while(!st.empty() and (*st.begin()).first<q) {
             cnt++;
             int val=(*st.begin()).first;
             int i=(*st.begin()).second.first;
