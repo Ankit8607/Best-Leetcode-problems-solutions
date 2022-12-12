@@ -27,7 +27,7 @@ public:
         st.insert({grid[0][0],{0,0}});
         vector<pair<int,int>>v;
         for(int i=0;i<n;i++){
-            v.push_back({queries[i],i}) ;
+            v.push_back({queries[i],i});
         }
         sort(v.begin(),v.end());
         for(auto &i:v){
