@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/maximum-candies-you-can-get-from-boxes/description/
 
-class Solution{
+class Solution {
 public:
     int ans=0;
     unordered_map<int,bool>contains;
