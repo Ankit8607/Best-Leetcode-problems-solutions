@@ -2,7 +2,7 @@
 
 class Solution {
 public:
-    int minimumOneBitOperations(int n){
+    int minimumOneBitOperations(int n) {
         int last=0,ans=0;
         for(int i=31;i>=0;i--){
             if(n&(1<<i)){
