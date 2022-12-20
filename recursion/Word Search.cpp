@@ -2,7 +2,7 @@
 
 class Solution {
 public:
-    bool dfs(int level,int i,int j,vector<vector<char>>& board, string &word,vector<vector<int>>&vis){
+    bool dfs(int level,int i,int j,vector<vector<char>>& board, string &word,vector<vector<int>>&vis) {
         if(level==word.size()) return 1;
         vis[i][j]=1;
         int ans=0;
