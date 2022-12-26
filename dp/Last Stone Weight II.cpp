@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/last-stone-weight-ii/description/
 
-class Solution{
+class Solution {
 public:
     int dp[31][3001],sum=0;
 
