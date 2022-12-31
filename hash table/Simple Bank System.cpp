@@ -16,7 +16,7 @@ class Bank
     }
         
     bool transfer(int account1, int account2, long long money) 
-    {
+     {
         //if either of the account is not valid then just return false
         if(account1<1 or account1>n or account2<1 or account2>n)
         return false;
