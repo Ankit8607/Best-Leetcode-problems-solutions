@@ -12,7 +12,7 @@ class Bank
         for(int i=0;i<(balance.size());i++)
         {
             mp[i+1] = balance[i];
-        }
+         }
      }
         
     bool transfer(int account1, int account2, long long money) 
