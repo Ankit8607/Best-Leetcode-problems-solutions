@@ -13,7 +13,7 @@ class Bank
         {
             mp[i+1] = balance[i];
         }
-    }
+     }
         
     bool transfer(int account1, int account2, long long money) 
     {
