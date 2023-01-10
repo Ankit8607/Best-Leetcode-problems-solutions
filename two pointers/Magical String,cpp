@@ -1,0 +1,29 @@
+// https://leetcode.com/problems/magical-string/
+
+class Solution {
+public:
+    int magicalString(int n) {
+        if(n<=3) return 1;
+        int ans=1,l=2,r=1;
+        string s="122";
+        n-=3;
+        while(n>0){
+            if(s[l]=='1'){
+                s+=(r+'0');
+            }
+            else{
+                s+=(r+'0');
+                if(n!=1){
+                    s+=(r+'0');
+                    n--;
+                    if(r==1) ans++;
+                }
+            }
+            if(r==1)ans++;
+            n--;
+            r=3-r;
+            l++;
+        }
+        return ans;
+    }
+};
