@@ -4,7 +4,7 @@ class Solution {
 public:
     vector<int>ans;
 
-    void rec(int node,int par,vector<int>&cnt,string &labels,vector<vector<int>>&g){
+    void rec(int node,int par,vector<int>&cnt,string &labels,vector<vector<int>>&g) {
         int prevcnt=cnt[labels[node]-'a'];
         cnt[labels[node]-'a']=1;
         for(auto &i:g[node]){
