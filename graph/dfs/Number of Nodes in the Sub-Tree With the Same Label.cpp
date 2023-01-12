@@ -13,7 +13,7 @@ public:
         ans[node]=cnt[labels[node]-'a'];
         cnt[labels[node]-'a']+=prevcnt;
     }
-    vector<int> countSubTrees(int n, vector<vector<int>>& edges, string labels) {
+    vector<int> countSubTrees(int n, vector<vector<int>>& edges, string labels)  {
         ans.resize(n,0);
         vector<vector<int>>g(n);
         vector<int>cnt(26,0);
