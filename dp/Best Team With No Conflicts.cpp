@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/best-team-with-no-conflicts/
 
-class Solution {
+class Solution  {
 public:
     vector<pair<int,int>>v;
 
