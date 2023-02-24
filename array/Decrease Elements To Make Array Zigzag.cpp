@@ -2,7 +2,7 @@
 
 class Solution {
 public:
-    int movesToMakeZigzag(vector<int>& nums) {
+    int movesToMakeZigzag(vector<int>& nums)  {
         int ans=1e9,cnt=0,n=nums.size();
         for(int i=1; i<nums.size(); i+=2){
             if(i==n-1){
