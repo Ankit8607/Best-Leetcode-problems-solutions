@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/sort-an-array/description/
 
-class Solution {
+class Solution  {
 public:
 
     void merge(int l,int mid,int r,vector<int>&nums){
