@@ -2,7 +2,7 @@
 
 class Solution {
 public:
-    bool isItPossible(string word1, string word2) {
+    bool isItPossible(string word1, string word2)  {
         set<char>a,b;
         int arr[26]={0},brr[26]={0};
         for(char &i:word1) a.insert(i),arr[i-'a']++; 
