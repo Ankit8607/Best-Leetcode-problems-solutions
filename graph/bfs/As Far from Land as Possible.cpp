@@ -2,7 +2,7 @@
 
 class Solution {
 public:
-    int maxDistance(vector<vector<int>>& grid) {
+    int maxDistance(vector<vector<int>>& grid)  {
         int n = grid.size();
         queue<pair<int, int>> q;
         //Note: The copy matrix visited can be avoided by updating the original matrix grid but changing the input parameter is not considered under good practices. That's why we are taking extra 2d matrix visited
