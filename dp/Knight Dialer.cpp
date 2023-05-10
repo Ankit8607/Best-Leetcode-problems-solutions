@@ -3,7 +3,7 @@
 class Solution {
 public:
     int mod=1e9+7;
-    vector<vector<int>>moves {
+    vector<vector<int>>moves  {
         {4,6},
         {6,8},
         {7,9},
