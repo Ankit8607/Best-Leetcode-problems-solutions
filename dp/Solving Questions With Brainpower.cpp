@@ -4,7 +4,7 @@ class Solution {
 public:
     #define ll long long
     ll dp[200100];
-    ll rec(int level,vector<vector<int>>& questions){
+    ll rec(int level,vector<vector<int>>& questions) {
         if(level>=questions.size()) return 0;
 
         if(dp[level]!=-1) return dp[level];
