@@ -4,7 +4,7 @@ int rec(int node, vector<int>&vis, vector<vector<int>>&g){
     if(vis[node]) return 0;
     int ans=1;
     vis[node]=1;
-    for(auto &i:g[node]){
+    for(auto &i:g[node]) {
         ans+=rec(i,vis,g);
     }
     return ans;
