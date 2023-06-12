@@ -7,7 +7,7 @@ public:
         vector<int>arr(26,0);
         for(int i=0;i<n;i++){
             arr[s[i]-'a']++;
-            if(arr[s[i]-'a']>1)  {
+            if(arr[s[i]-'a']>1){
                 ans++;
                 arr.clear();
                 arr.resize(26,0);
