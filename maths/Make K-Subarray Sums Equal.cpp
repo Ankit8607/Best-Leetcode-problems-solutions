@@ -3,7 +3,7 @@
 
 class Solution {
 public:
-    long long makeSubKSumEqual(vector<int>& arr, int k)   {
+    long long makeSubKSumEqual(vector<int>& arr, int k){
         long long ans=0;
         long long n=arr.size();
         long long g=gcd(n,k);
