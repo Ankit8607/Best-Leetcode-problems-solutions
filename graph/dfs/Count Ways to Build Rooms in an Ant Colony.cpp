@@ -2,7 +2,7 @@
 
 class Solution {
 public:
-    int waysToBuildRooms(vector<int>& prevRoom) {
+    int waysToBuildRooms(vector<int>& prevRoom)  {
         int n = prevRoom.size();
         
         // Construct tree.
