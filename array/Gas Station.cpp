@@ -12,7 +12,7 @@ Given two integer arrays gas and cost, return the starting gas station's index i
 
 Example 1:
 
-Input: gas = [1,2,3,4,5], cost = [3,4,5,1,2]
+Input: gas = [1,2,3,4,5], cost = [3,4,5,1,2] 
 Output: 3
 Explanation:
 Start at station 3 (index 3) and fill up with 4 unit of gas. Your tank = 0 + 4 = 4
