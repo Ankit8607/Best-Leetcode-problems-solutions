@@ -70,3 +70,39 @@ public:
  * int param_3 = obj->top();
  * bool param_4 = obj->empty();
  */
+
+
+class MyStack {
+// public:
+//     int tp;
+//     queue<int>a,b;
+//     MyStack() {
+//     }
+    
+//     void push(int x) {
+//         a.push(x);
+//         tp=x;
+//     }
+    
+//     int pop() {
+//         while(!a.empty()){
+//             int t=a.front();
+//             a.pop();
+//             if(a.empty()){
+//                 swap(a,b);
+//                 return t;
+//             }
+//             tp=t;
+//             b.push(t);
+//         }
+//         return tp;
+//     }
+    
+//     int top() {
+//         return tp;
+//     }
+    
+//     bool empty() {
+//         return a.empty();
+//     }
+// };
