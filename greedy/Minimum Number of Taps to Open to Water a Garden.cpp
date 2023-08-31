@@ -11,7 +11,7 @@ public:
             arr[i]=-1;
             if(range[i]==0) continue;
             arr[max(0,i-range[i])]=min(n,i+range[i]);
-        }
+        } 
         for(int i=0;i<=n;i++){
             store=max(store,arr[i]);          
             if(till<=i and i!=n){
