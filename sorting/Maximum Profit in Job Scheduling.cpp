@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/maximum-profit-in-job-scheduling/
 
-class Solution  {
+class Solution{
 public:
     int jobScheduling(vector<int>& startTime, vector<int>& endTime, vector<int>& profit) {
         int n = startTime.size();
