@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/median-of-two-sorted-arrays/description/
 
-class Solution  {
+class Solution   {
 public:
 
     int kthElement(vector<int>&arr1, vector<int>& arr2, int n, int m, int k)
