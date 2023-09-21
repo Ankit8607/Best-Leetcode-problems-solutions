@@ -1,38 +1,36 @@
-// https://leetcode.com/problems/median-of-two-sorted-arrays/
+// https://leetcode.com/problems/median-of-two-sorted-arrays/description/
 
 class Solution {
 public:
-    int kth(int a[], int m, int b[], int n, int k) {
-        if (m < n) return kth(b,n,a,m,k);
-        if (n==0) return a[k-1];
-        if (k==1) return min(a[0],b[0]);
 
-        int j = min(n,k/2);
-        int i = k-j;
-        if (a[i-1] > b[j-1]) return kth(a,i,b+j,n-j,k-j);
-        return kth(a+i,m-i,b,j,k-i);
+    int kthElement(vector<int>&arr1, vector<int>& arr2, int n, int m, int k)
+    {
+        if(n>m) return kthElement(arr2,arr1,m,n,k);
+        
+        int low=max(0,k-m),high=min(n,k);
+        while(low<=high){
+            int mid1=(low+high)/2;
+            int mid2=k-mid1;
+            
+            int l1=mid1==0?INT_MIN:arr1[mid1-1];
+            int l2=mid2==0?INT_MIN:arr2[mid2-1];
+            
+            int r1=mid1==n?INT_MAX:arr1[mid1];
+            int r2=mid2==m?INT_MAX:arr2[mid2];
+            
+            if(l1<=r2 and l2<=r1) return max(l1,l2);
+            if(l1>r2) high=mid1-1;
+            else low=mid1+1;
+        }
+        return 1;
     }
 
-    double findMedianSortedArrays(vector<int>&num1,vector<int>&num2) {
-        int n=num2.size(),m=num1.size();
-        if(n==0 and m==0) return 0;
-        if(n==0){
-            if(m%2) return (double) num1[m/2];
-            else return (double) (num1[m/2]+num1[m/2-1])/2.0;
-        }
-        if(m==0){
-            if(n%2) return (double) num2[n/2];
-            else return (double) (num2[n/2]+num2[n/2-1])/2.0;
-        }
-        int b[n],a[m];
-        for(int i=0;i<n;i++) b[i]=num2[i];
-        for(int i=0;i<m;i++) a[i]=num1[i];
-        int k = (m+n)/2;
-        int m1 = kth(a,m,b,n,k+1);
-        if ((m+n)%2==0) {
-            int m2 = kth(a,m,b,n,k);
-            return ((double)m1+m2)/2.0;
-        }
-        return m1;
+    double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        int n=nums1.size(),m=nums2.size();
+        int k=(n+m)/2;
+        double t=kthElement(nums1,nums2,n,m,k+1);
+        if((n+m)%2) return t;
+        t+=kthElement(nums1,nums2,n,m,k);
+        return t/2;
     }
 };
