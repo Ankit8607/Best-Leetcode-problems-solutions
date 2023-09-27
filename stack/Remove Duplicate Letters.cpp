@@ -2,7 +2,7 @@
 
 class Solution {
 public:
-    string removeDuplicateLetters(string s) {
+    string removeDuplicateLetters(string s)  {
         stack<char>st;
         int n=s.size();
         int last[26],pre[26]={0};
