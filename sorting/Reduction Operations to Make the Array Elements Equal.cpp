@@ -9,7 +9,7 @@ public:
         while(i<n){
             while(i+1<n and nums[i]==nums[i+1]){
                 i++;
-            }
+            } 
             ans+=n-i-1;
             i++;
         }
