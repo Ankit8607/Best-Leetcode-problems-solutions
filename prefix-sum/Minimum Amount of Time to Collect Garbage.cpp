@@ -7,7 +7,7 @@ public:
         int cnt[n][120];
         memset(cnt, 0, sizeof(cnt));
 
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n;i++){ 
             for(int j=0;j<garbage[i].size();j++)
                 cnt[i][garbage[i][j]]++;
         }
