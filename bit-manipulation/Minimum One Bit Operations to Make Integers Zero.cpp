@@ -10,7 +10,7 @@ public:
                 else{
                     ans+=(1<<i);
                     last=1;
-                }
+                } 
             }
             else if(last==1){
                 ans+=(1<<i);
