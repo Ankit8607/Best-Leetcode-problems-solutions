@@ -2,7 +2,7 @@
 
 class Solution {
 public:
-    vector<int> searchRange(vector<int>& nums, int target) {
+    vector<int> searchRange(vector<int>& nums, int target) { 
         int it=lower_bound(nums.begin(),nums.end(),target)-nums.begin();
         int it2=upper_bound(nums.begin(),nums.end(),target)-nums.begin();
         if(it==nums.size() || nums[it]!=target) return {-1,-1};
