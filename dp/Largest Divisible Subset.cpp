@@ -7,7 +7,7 @@ public:
         int dp[n],last[n];
         dp[n-1]=1;
         last[n-1]=n;
-        sort(nums.begin(),nums.end());
+        sort(nums.begin(),nums.end()); 
         int res=1;
         for(int i=n-2;i>=0;i--){
             dp[i]=1;
