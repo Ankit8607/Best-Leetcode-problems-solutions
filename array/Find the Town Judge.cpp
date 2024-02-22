@@ -7,7 +7,7 @@ public:
         for(auto &i:trust){
             he[i[0]]++;
             tr[i[1]]++;
-        }
+        } 
         int ans=-1;
         for(int i=1;i<=n;i++){
             if(he[i]==0 and tr[i]==n-1){
