@@ -9,7 +9,7 @@
  * };
  */
 class Solution {
-public:
+public: 
     ListNode *detectCycle(ListNode *head) {
         unordered_set<ListNode *>mp;
         ListNode *t=head;
