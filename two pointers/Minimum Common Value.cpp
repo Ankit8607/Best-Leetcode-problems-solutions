@@ -9,6 +9,6 @@ public:
             if(nums1[i]>nums2[j]) j++;
             else i++;
         }
-        return -1;
+        return -1; 
     }
 };
