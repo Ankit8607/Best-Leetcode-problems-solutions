@@ -9,3 +9,14 @@ public:
         return -1;
     }
 };
+
+
+// In python
+
+// class Solution:
+//     def pivotInteger(self, n: int) -> int:
+//         sum = n*(n+1)/2
+//         x=int(math.sqrt(sum))
+//         if x*x == sum:
+//             return int(x)
+//         return -1
