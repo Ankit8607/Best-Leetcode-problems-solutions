@@ -4,7 +4,7 @@ class Solution {
 public:
     int pivotInteger(int n) {
         int sum=n*(n+1)/2;
-        long long t=sqrt(sum);
+        long long t=sqrt(sum); 
         if(t*t==sum) return sqrt(sum);
         return -1;
     }
