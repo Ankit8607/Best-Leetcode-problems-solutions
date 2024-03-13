@@ -8,7 +8,7 @@ public:
         if(t*t==sum) return sqrt(sum);
         return -1;
     }
-};
+}; 
 
 
 // In python
