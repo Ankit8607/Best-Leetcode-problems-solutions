@@ -20,3 +20,19 @@ public:
 //         if x*x == sum:
 //             return int(x)
 //         return -1
+
+
+// In javascript
+
+// /**
+//  * @param {number} n
+//  * @return {number}
+//  */
+// var pivotInteger = function(n) {
+//     let sum = n*(n+1)/2;
+//     let x = parseInt(Math.sqrt(sum))
+//     console.log(x);
+//     if(x*x==sum)
+//         return x;
+//     return -1;
+// };
