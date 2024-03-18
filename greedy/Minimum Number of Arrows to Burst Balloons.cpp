@@ -13,7 +13,7 @@ Given the array points, return the minimum number of arrows that must be shot to
 Example 1:
 
 Input: points = [[10,16],[2,8],[1,6],[7,12]]
-Output: 2
+Output: 2 
 Explanation: The balloons can be burst by 2 arrows:
 - Shoot an arrow at x = 6, bursting the balloons [2,8] and [1,6].
 - Shoot an arrow at x = 11, bursting the balloons [10,16] and [7,12].
@@ -63,3 +63,52 @@ public:
         return ans;
     }
 };
+
+
+// class Solution {
+// public:
+//     int findMinArrowShots(vector<vector<int>>& points) {
+//         int last=INT_MIN,ans=0;
+//         sort(points.begin(),points.end(),[](vector<int>&a,vector<int>&b){
+//             return a[1]<b[1];
+//         });
+//         for(auto i:points)
+//             if(i[0]>last || (i[0]==INT_MIN and ans==0)) last=i[1],ans++;
+//         return ans;
+//     }
+// };
+
+
+// In Python
+
+// class Solution:
+//     def findMinArrowShots(self, points: List[List[int]]) -> int:
+//         last=float('-inf')
+//         ans=0
+//         p=sorted(points,key=lambda x: x[1])
+//         for i in p:
+//             if i[0]>last: 
+//                 last=i[1]
+//                 ans+=1
+//         return ans
+
+
+
+ 
+// In javascript
+
+// /**
+//  * @param {number[][]} points
+//  * @return {number}
+//  */
+// var findMinArrowShots = function(points) {
+//     let last=Number.MIN_SAFE_INTEGER,ans=0;
+//     points.sort(comp);
+//     function comp(a,b){
+//         return (a[1]<b[1])?-1:1;
+//     }
+//     points.forEach((i) => {
+//         if(i[0]>last) last=i[1],ans++;
+//     });
+//     return ans;
+// };
