@@ -13,22 +13,22 @@ public:
 };
 
 
-In python 
+// In python 
 
-class Solution:
-    def lengthOfLastWord(self, s: str) -> int:
-        words = s.split()
-        return len(words[-1])
+// class Solution:
+//     def lengthOfLastWord(self, s: str) -> int:
+//         words = s.split()
+//         return len(words[-1])
 
 
-In javascript
+// In javascript
 
-/**
- * @param {string} s
- * @return {number}
- */
-var lengthOfLastWord = function(s) {
-    const words = s.trim().split(" ");
-    console.log(words);
-    return words[words.length - 1].length;
-};
+// /**
+//  * @param {string} s
+//  * @return {number}
+//  */
+// var lengthOfLastWord = function(s) {
+//     const words = s.trim().split(" ");
+//     console.log(words);
+//     return words[words.length - 1].length;
+// };
