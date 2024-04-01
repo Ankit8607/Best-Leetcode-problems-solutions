@@ -11,3 +11,24 @@ public:
         return ans;
     }
 };
+
+
+In python 
+
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        words = s.split()
+        return len(words[-1])
+
+
+In javascript
+
+/**
+ * @param {string} s
+ * @return {number}
+ */
+var lengthOfLastWord = function(s) {
+    const words = s.trim().split(" ");
+    console.log(words);
+    return words[words.length - 1].length;
+};
