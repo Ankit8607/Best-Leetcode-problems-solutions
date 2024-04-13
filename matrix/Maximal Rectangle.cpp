@@ -3,7 +3,7 @@
 class Solution {
 public:
     int maximalRectangle(vector<vector<char>>& mat) {
-        int n=mat.size(),m=mat[0].size();
+        int n=mat.size(),m=mat[0].size(); 
         vector<vector<int>> row(n,vector<int>(m+1,0));
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
