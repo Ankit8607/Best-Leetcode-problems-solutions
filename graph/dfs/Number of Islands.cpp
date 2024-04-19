@@ -9,7 +9,7 @@ public:
         vis[i][j]=1;
         dfs(i+1,j,g,vis);
         dfs(i-1,j,g,vis);
-        dfs(i,j+1,g,vis);
+        dfs(i,j+1,g,vis); 
         dfs(i,j-1,g,vis);
     }
 
