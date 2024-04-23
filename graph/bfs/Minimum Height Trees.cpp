@@ -1,5 +1,8 @@
 // https://leetcode.com/problems/minimum-height-trees/description/?envType=daily-question&envId=2024-04-23
 
+// Solution referred from : https://leetcode.com/problems/minimum-height-trees/solutions/5060930/bfs-remove-leaf-nodes/?envType=daily-question&envId=2024-04-23
+// I have seen this first time 
+
 class Solution {
 public:
     vector<int> findMinHeightTrees(int n, vector<vector<int>>& edges) {
