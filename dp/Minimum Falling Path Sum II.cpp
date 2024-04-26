@@ -7,7 +7,7 @@ public:
         int ans1=0,ans2=0;
         int n=grid.size(),m=grid[0].size();
         for(int i=0;i<n;i++){
-            for(int j=0;j<m;j++){
+            for(int j=0;j<m;j++){ 
                 if(last==j) grid[i][j]+=ans2; 
                 else grid[i][j]+=ans1;
             }
