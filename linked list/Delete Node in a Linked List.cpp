@@ -8,7 +8,7 @@
  *     ListNode(int x) : val(x), next(NULL) {} 
  * };
  */ 
-class Solution {
+class Solution { 
 public:
     void deleteNode(ListNode* head) {
        while(head->next->next){
