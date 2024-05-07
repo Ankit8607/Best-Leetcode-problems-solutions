@@ -16,7 +16,7 @@ public:
             head=head->next;
        }
        head->val=head->next->val;
-       head->next=NULL;
+       head->next=NULL; 
     }
 };
 
