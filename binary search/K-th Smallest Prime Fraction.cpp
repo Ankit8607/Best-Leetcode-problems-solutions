@@ -7,7 +7,7 @@ public:
         double l=0,r=1;
         int n = arr.size();
         while(l<=r){
-            double mid=(l+r)/2;
+            double mid=(l+r)/2; 
             int j=1,total=0; 
             res[0]=0,res[1]=1;
             for(int i=0;i<n;i++){
