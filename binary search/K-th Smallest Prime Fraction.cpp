@@ -19,7 +19,7 @@ public:
             if(total<k) l=mid;
             else r=mid;
             cout<<mid<<endl;
-        }
+        } 
         return res;
     }
 };
