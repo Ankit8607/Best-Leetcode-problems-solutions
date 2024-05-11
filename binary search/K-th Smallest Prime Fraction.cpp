@@ -8,7 +8,7 @@ public:
         int n = arr.size();
         while(l<=r){
             double mid=(l+r)/2;
-            int j=1,total=0;
+            int j=1,total=0; 
             res[0]=0,res[1]=1;
             for(int i=0;i<n;i++){
                 while(j<n and arr[i]>=arr[j]*mid) j++;
