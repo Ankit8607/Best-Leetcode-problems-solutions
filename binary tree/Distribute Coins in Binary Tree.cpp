@@ -1,37 +1,5 @@
-// https://leetcode.com/problems/distribute-coins-in-binary-tree/
+// https://leetcode.com/problems/distribute-coins-in-binary-tree/description/?envType=daily-question&envId=2024-05-18
 
-/*
-
-You are given the root of a binary tree with n nodes where each node in the tree has node.val coins. There are n coins in total throughout the whole tree.
-
-In one move, we may choose two adjacent nodes and move one coin from one node to another. A move may be from parent to child, or from child to parent.
-
-Return the minimum number of moves required to make every node have exactly one coin.
-
- 
-
-Example 1:
-
-
-Input: root = [3,0,0]
-Output: 2
-Explanation: From the root of the tree, we move one coin to its left child, and one coin to its right child.
-Example 2:
-
-
-Input: root = [0,3,0]
-Output: 3
-Explanation: From the left child of the root, we move two coins to the root [taking two moves]. Then, we move one coin from the root of the tree to the right child.
- 
-
-Constraints:
-
-The number of nodes in the tree is n.
-1 <= n <= 100
-0 <= Node.val <= n
-The sum of all Node.val is n.
-
-*/
 
 /**
  * Definition for a binary tree node.
@@ -46,18 +14,69 @@ The sum of all Node.val is n.
  */
 class Solution {
 public:
-    
-    int rec(TreeNode *root,int &ans){
+    int rec(TreeNode* root,int &res){
         if(root==NULL) return 0;
-        
-        int left=rec(root->left,ans),right=rec(root->right,ans);
-        ans+=abs(left)+abs(right);
-        return root->val+left+right-1;
-    }
-    
-    int distributeCoins(TreeNode* root) {
-        int ans=0;
-        rec(root,ans);
+
+        int ans=root->val+rec(root->left,res)+rec(root->right,res);
+        ans--;
+        res+=abs(ans);
         return ans;
     }
+
+    int distributeCoins(TreeNode* root) {
+        int res=0;
+        rec(root,res);
+        return res;
+    }
 };
+
+
+// In python
+
+// # Definition for a binary tree node.
+// # class TreeNode:
+// #     def __init__(self, val=0, left=None, right=None):
+// #         self.val = val
+// #         self.left = left
+// #         self.right = right
+// class Solution:
+//     def distributeCoins(self, root: Optional[TreeNode]) -> int:
+//         def rec(root,res):
+//             if root==None: return 0
+
+//             ans=root.val+rec(root.left,res)+rec(root.right,res)
+//             ans-=1
+//             res[0]+=abs(ans)
+//             return ans
+//         res=[0]
+//         rec(root,res)
+//         return res[0]
+
+
+// In javascript
+
+// /**
+//  * Definition for a binary tree node.
+//  * function TreeNode(val, left, right) {
+//  *     this.val = (val===undefined ? 0 : val)
+//  *     this.left = (left===undefined ? null : left)
+//  *     this.right = (right===undefined ? null : right)
+//  * }
+//  */
+// /**
+//  * @param {TreeNode} root
+//  * @return {number}
+//  */
+// var distributeCoins = function(root) {
+//     let res={count:0};
+//     rec(root,res);
+//     return res.count;
+// };
+// var rec=(root,res)=>{
+//     if(root==null) return 0;
+
+//     let ans=root.val+rec(root.left,res)+rec(root.right,res);
+//     ans--;
+//     res.count+=Math.abs(ans);
+//     return ans;
+// }
