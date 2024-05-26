@@ -4,7 +4,7 @@ class Solution {
 public:
     int dp[100010][3][2],mod=1e9+7;
 
-    int rec(int level,int late, int absent){
+    int rec(int level,int late, int absent){ 
         if(absent==2) return 0;
         if(level==0) return 1;
 
